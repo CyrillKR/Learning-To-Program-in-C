@@ -49,9 +49,10 @@ main()
         pc = c;
     }
 
+    printf("\nTotal of %d words!\n\n", nw);
+
     /* Horizontal Histogram */
-    printf("Total of %d words!\n", nw);
-    printf("Histrogram of their lengths Horizontal\n");
+    printf("Histrogram of their lengths horizontal:\n");
     for (i = 0; i < nw; ++i)
     {
         printf("%2d ", words[i]);
@@ -59,4 +60,45 @@ main()
             printf("|");
         printf("\n");
     }
+    printf("\n");
+
+    /* Vertical Histrogram */
+    int hv;
+    int cwords[nw];
+    hv = 0;
+
+    /* Finding highest value */
+    for (i = 0; i < nw; ++i)
+    {
+        if (words[i] > hv)
+            hv = words[i];
+    }
+
+    /* Copying values for keep reference */
+    for (i = 0; i < nw; ++i)
+        cwords[i] = words[i];
+
+    /* Printing the histogram */
+    printf("Histrogram of their lengths vertical:\n");
+    for (hv; hv > 0; --hv)
+    {
+        for (i = 0; i < nw; ++i)
+        {
+            if (cwords[i] == hv)
+            {
+                printf(" * ");
+                --cwords[i];
+            }
+            else
+            {
+                printf("   ");
+            }
+        }
+        printf(" \n");
+    }
+    for (i = 0; i < nw; i++)
+    {
+        printf(" %d ", words[i]);
+    }
+    printf("\n");
 }
