@@ -35,6 +35,12 @@ main()
             ;
         else if (pc != ' ' && pc != '\n' && pc != '\t')
         {
+            if (nw == MAX_WORD_COUNT)
+            {
+                words[nw] = ccount;
+                printf("Max word count reached\n");
+                break;
+            }
             words[nw] = ccount;
             ++nw;
             ccount = 0;
