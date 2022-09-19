@@ -80,7 +80,7 @@ main()
 
     /* Printing the histogram */
     printf("Histrogram of their lengths vertical:\n");
-    for (hv; hv > 0; --hv)
+    for (; hv > 0; --hv)
     {
         for (i = 0; i < nw; ++i)
         {
