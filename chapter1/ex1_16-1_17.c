@@ -6,11 +6,14 @@
     program so it will correcty print the length
     of arbitrarily long input lines, and as much
     as possible of the text.
+
+    Exercise 1 - 17:
+    Write a program to print all inputs that are longer than 80 characters.
 */
 
 #define MAXLINE 1000
 #define LINE_LIMIT 10
-#define LONG_LINE 20
+#define LONG_LINE 80
 
 int getline(char line[], int maxline);
 void copy(char to[], char from[]);
