@@ -1,4 +1,7 @@
-.a.out
+.vscode
+
 a.out
-chapter1/.a.out
-chapter1/a.out
+build
+
+ex*
+!ex*.c
