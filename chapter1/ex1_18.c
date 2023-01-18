@@ -9,26 +9,26 @@
 
 #define MAXLINE 1000
 
-int get_line(char line[]);
-void print_line(char line[]);
+int get_input(char line[]);
+void print_text(char line[]);
 
 int main()
 {
     int c, lc, len, i, j;
     char current_line[MAXLINE];
 
-    while ((c = get_line(current_line)) != EOF)
+    while ((c = get_input(current_line)) != EOF)
     {
         if (!(lc == '\n' && c == -2))
         {
-            print_line(current_line);
+            print_text(current_line);
         }
     }
 
     return 0;
 }
 
-int get_line(char line[])
+int get_input(char line[])
 {
     int c, pc, i;
 
@@ -50,7 +50,7 @@ int get_line(char line[])
     return c;
 }
 
-void print_line(char line[])
+void print_text(char line[])
 {
     if (line[0] != '\0')
         printf("%s\n", line);

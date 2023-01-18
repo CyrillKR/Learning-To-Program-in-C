@@ -17,7 +17,7 @@
 
 int getline(char line[], int maxline);
 void copy(char to[], char from[]);
-void print_line(char str[]);
+void print_text(char str[]);
 
 int main()
 {
@@ -34,7 +34,7 @@ int main()
         if (len > LONG_LINE)
         {
             printf("Line %d legnth: %d\n", lcount + 1, len);
-            print_line(line);
+            print_text(line);
         }
 
         if (len > max)
@@ -72,7 +72,7 @@ void copy(char to[], char from[])
         ++i;
 }
 
-void print_line(char line[])
+void print_text(char line[])
 {
     printf("%s", line);
 }

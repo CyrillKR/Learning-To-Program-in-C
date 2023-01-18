@@ -9,7 +9,7 @@
 #define MAXLINE 1000
 
 void reverse(char s[], char r[]);
-int get_line(char line[]);
+int get_input(char line[]);
 int count_chars(char s[]);
 
 int main()
@@ -18,7 +18,7 @@ int main()
     char current_line[MAXLINE];
     char reverse_line[MAXLINE];
 
-    while ((c = get_line(current_line)) != EOF)
+    while ((c = get_input(current_line)) != EOF)
     {
         reverse(current_line, reverse_line);
         if (reverse_line[0] != '\0')
@@ -43,7 +43,7 @@ void reverse(char s[], char r[])
     r[i] = '\0';
 }
 
-int get_line(char line[])
+int get_input(char line[])
 {
     int c, i;
     for (i = 0; (c = getchar()) != EOF && c != '\n'; ++i)
