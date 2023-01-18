@@ -49,7 +49,7 @@ int get_input(char line[])
         {
             blank_count = 0;
             is_in_word = OUT;
-            line[i] = '+';
+            line[i] = c;
         }
         else if (c == ' ')
         {
@@ -93,7 +93,7 @@ int entab(char line[], int index)
         blank_count++;
     }
 
-    line[index] = '_';
+    line[index] = '\t';
     return index;
 }
 
